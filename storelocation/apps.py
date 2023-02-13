@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class StorelocationConfig(AppConfig):
+class StoreLocationConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'StoreLocation'
+    name = 'storelocation'
