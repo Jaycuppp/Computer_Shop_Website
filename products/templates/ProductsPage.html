@@ -1,0 +1,21 @@
+{% extends '0ProductBase.html' %}
+
+{% block content %}
+    <h3> Computer Products </h3>
+    <div class="row">
+        {% comment %} Looping through the Products Model so the data can be displatyed in this template {% endcomment %}
+        {% for product in Products %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src= '{{ product.Image_url }}'>
+                <div class="card-body">
+                  <h5 class="card-title"> {{ product.Name }} </h5>
+                  <p class="card-text"> Retail Price : ${{ product.Price }}</p>
+                  <p class="stock-status"> In Stock </p>
+                  <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
